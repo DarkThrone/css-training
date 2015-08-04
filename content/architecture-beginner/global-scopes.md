@@ -2,7 +2,7 @@
 
 ## What is it?
 
-Global scope means that a css rule is applied to the whole app. For example, you have this rule
+Global scope means that a css rule is applied to the whole app. For example, if you have this rule
 
 ```css
 .title{
@@ -11,15 +11,15 @@ Global scope means that a css rule is applied to the whole app. For example, you
 }
 ```
 
-The class `.title` will be applied to every element that has the `title` class assigned to it, in every page of the app. That seems to be alright, but that's a fairly generic class name, and many parts of the app may have it in them with different implementations (e.g. different color and font-size). You will sooner or later find problems with generic class names in the global scope.
+The class `.title` will be applied to every element in every page of the app that has the `title` class assigned to it. That seems to be alright, but that's a fairly generic class name, and many parts of the app may have it in them with different implementations (e.g. different color and font-size). You will sooner or later find problems with generic class names in the global scope.
 
 ## How can you avoid it?
 
-There two ways of achieving that, that are commonly used: `namespaces` and `prefixes`
+There are two commonly used ways of achieving that: `namespaces` and `prefixes`
 
 ### namespaces
 
-A namespace is a class that wraps all the rules that belong to a page or component. By using that, we will avoid collision between different pages implementing the same generic classname.
+A namespace is a class that wraps all the rules that belongs to a page or component. By using them we will avoid collision between different pages implementing the same generic classname.
 
 ```html
 <div class="login-page">
@@ -51,7 +51,7 @@ A namespace is a class that wraps all the rules that belong to a page or compone
 
 ### prefixes
 
-You can prefix a name convention to a class, in order to differentiate one another. This is not recommended to wrap classes that belong to a page or component, since it will require that every one of the classes has the prefix. Prefixes are useful in other scenarios, where you need, for example, to add a class that's intended to work as a js hook, so you can do something like `js-login-page`.
+You can prefix a name convention to a class in order to differentiate it from other classes. This is not recommended to wrap classes that belong to a page or component since it will require that every one of the classes has the prefix. Prefixes are useful in other scenarios where you might need, for example, to add a class that's intended to work as a js hook so you can use `js-login-page`.
 
 ```html
 <div>
@@ -83,7 +83,7 @@ You can prefix a name convention to a class, in order to differentiate one anoth
 
 ## Are they useful?
 
-Yes! They are useful, but you have to be cautious about them. One of the most common uses is for reseting or normalizing. For example, maybe you want all of your `li` not to have bullets on the side, or you want the `a` not to have an underline. In this cases, global css are the way to go.
+Yes, they are! but you have to be cautious when using them. One of the most common uses of Global Scopes is reseting or normalizing. For example, maybe you want all of your `li` not to have bullets on the side, or you don't want the `a` to be underlined. In those cases global css is the way to go.
 
 ```css
 li {
