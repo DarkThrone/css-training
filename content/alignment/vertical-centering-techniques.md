@@ -1,10 +1,10 @@
 # Vertical centering techniques
 
-You will learn here different techniques to center content vertically that you can use in different scenarios.
+In this chapter you will learn how to center content vertically using different techniques.
 
 ## Center content without a fixed height
 
-If you don't know the size of the content, you can absolute positioned it and then set the `top` and `bottom` property. The browser will set those values, and the content will be centered.
+If you don't know the size of the content, you can set `position: absolute` along with `top` and `bottom` properties. The browser will set those values automatically.
 
 ```css
 div{
@@ -18,7 +18,7 @@ div{
 
 ## Center content with a fixed height
 
-If the height of the content is known, you can use this simple technique to vertically center it (it works horizontally to). If the box has 300px height, yo need to move it 50% down with the `top` property and moving up half the height with the `margin-top` property with a negative value.
+If the height of the content is a known value, you can use this simple technique to vertically center it. If the box has 300px height, you need to move it 50% down with the `top` property and moving up half the height with the `margin-top` property with a negative value. This CSS trick also centers content horizontally.
 
 ```css
 div{
@@ -31,7 +31,7 @@ div{
 }
 ```
 
-## Center with flexbox
+## Center content using flexbox
 
 `flexbox` comes with a nice centering statement that makes the browser do the math. If you center it and make flexbox work in column direction, the content will be vertically centered. Use this technique only when the supported browser implements flexbox.
 
@@ -43,7 +43,7 @@ div{
 }
 ```
 
-## Center with display table
+## Center content using display table
 
 `display: table-cell;` makes an element to behave like a table cell, so `vertical-align: middle;` will just work :)
 
