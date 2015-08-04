@@ -8,7 +8,7 @@ How to center a container when we don't know its dimensions.
 <div class="container centering-parent">
   <div id="content" class="content centering-child">
     <p>This is Content! And it's centered!</p>
-    <p>You can add as many or as few lines you want,</p>
+    <p>You can add as many or as few lines as you want,</p>
     <p>it will always be centered.</p>
   </div>
 </div>
